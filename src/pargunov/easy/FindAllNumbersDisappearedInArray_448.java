@@ -55,4 +55,26 @@ public class FindAllNumbersDisappearedInArray_448 {
 
         return res;
     }
+
+    // nums is 1 -> n with length of n. This means each element correct position is: nums[element - 1]
+    // we can mark elements at indexes where these elements should be by making them negative and
+    // after we can add all the positive elements to result array.
+    // Runtime Beats 89.58% Memory Beats 67.34%
+    private static List<Integer> findDisappearedNumbers3(int[] nums) {
+        List<Integer> res = new ArrayList<>();
+
+        for(int i = 0; i < nums.length; i++) {
+            var current = Math.abs(nums[i]);
+            if(nums[current - 1] > 0) {
+                nums[current - 1] = nums[current - 1] * -1;
+            }
+        }
+
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] > 0) res.add(i + 1);
+        }
+
+
+        return res;
+    }
 }
