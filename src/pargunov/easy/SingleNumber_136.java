@@ -1,8 +1,7 @@
 package pargunov.easy;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
+import java.util.*;
 import java.util.function.Function;
 
 import static java.util.stream.Collectors.counting;
@@ -14,9 +13,9 @@ public class SingleNumber_136 {
         int[] nums2 = {4, 1, 2, 1, 2}; // 4
         int[] nums3 = {1}; // 1
 
-        System.out.println(singleNumber3(nums1));
-        System.out.println(singleNumber3(nums2));
-        System.out.println(singleNumber3(nums3));
+        System.out.println(singleNumber4(nums1));
+        System.out.println(singleNumber4(nums2));
+        System.out.println(singleNumber4(nums3));
     }
 
     private static int singleNumber(int[] nums) {
@@ -54,4 +53,22 @@ public class SingleNumber_136 {
 
         return res;
     }
+
+    private static int singleNumber4(int[] nums) {
+        var res = 0;
+        Set<Integer> counter = new HashSet<>();
+
+        for (int num : nums) {
+            if (counter.contains(num)) {
+                res = 0;
+            } else {
+                counter.add(num);
+                res = num;
+            }
+        }
+
+
+        return res;
+    }
+
 }
