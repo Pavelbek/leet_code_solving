@@ -6,7 +6,7 @@ public class PalindromeLinkedList_234 {
     }
 
     // Runtime Beats 56.82% Memory Beats 66.15%
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome(ListNode<Integer> head) {
         var reversed = reverseLinkledList(middleOfLinkedList(head));
 
         while(reversed != null) {
@@ -18,7 +18,7 @@ public class PalindromeLinkedList_234 {
         return true;
     }
 
-    public ListNode middleOfLinkedList(ListNode head) {
+    public <T> ListNode<T> middleOfLinkedList(ListNode<T> head) {
         ListNode slow = head;
         ListNode fast = head;
 
@@ -30,7 +30,7 @@ public class PalindromeLinkedList_234 {
         return slow;
     }
 
-    public ListNode reverseLinkledList(ListNode head) {
+    public <T> ListNode<T> reverseLinkledList(ListNode<T> head) {
         ListNode prev = null;
 
         while(head != null) {
@@ -42,12 +42,4 @@ public class PalindromeLinkedList_234 {
 
         return prev;
     }
-
-    private static class ListNode {
-      int val;
-     ListNode next;
-      ListNode() {}
-     ListNode(int val) { this.val = val; }
-     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-   }
 }

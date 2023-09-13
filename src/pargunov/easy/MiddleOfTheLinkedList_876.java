@@ -4,8 +4,8 @@ public class MiddleOfTheLinkedList_876 {
     public static void main(String[] args) {
 
     }
-    public ListNode middleNode(ListNode head) {
-        var slow = head;
+    public <T> ListNode<T> middleNode(ListNode<T> head) {
+        ListNode slow = head;
         var fast = head;
 
         while(fast != null && fast.next != null) {
@@ -15,16 +15,4 @@ public class MiddleOfTheLinkedList_876 {
 
         return slow;
     }
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) {
-            this.val = val;
-        }
-        ListNode(int val, ListNode next) {
-            this.val = val; this.next = next;
-        }
-  }
 }

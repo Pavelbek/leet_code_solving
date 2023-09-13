@@ -24,15 +24,6 @@ public class RemoveLinkedListElements_203 {
         return newHead.next;
     }
 
-    private static class ListNode<T> {
-        T val;
-        ListNode<T> next;
-
-        public ListNode(T value) {
-            this.val = value;
-        }
-    }
-
     private static <T> ListNode<T> createLinkedList(T ...values) {
         ListNode<T> head = new ListNode<>(values[0]);
         ListNode current = head;

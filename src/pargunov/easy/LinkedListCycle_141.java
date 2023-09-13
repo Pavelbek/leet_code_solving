@@ -5,7 +5,7 @@ public class LinkedListCycle_141 {
 
     }
 
-    private static boolean hasCycle(ListNode head) {
+    private static <T> boolean hasCycle(ListNode<T> head) {
         var fast = head;
         var slow = head;
 
@@ -15,14 +15,5 @@ public class LinkedListCycle_141 {
             if(fast == slow) return true;
         }
         return false;
-    }
-
-    private static class ListNode<T> {
-        T val;
-        ListNode<T> next;
-
-        public ListNode(T value) {
-            this.val = value;
-        }
     }
 }
