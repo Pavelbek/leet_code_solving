@@ -19,4 +19,22 @@ public class SquaresOfSortedArray_977 {
 
         return res;
     }
+
+    private static int[] sortedSquares2(int[] nums) {
+        int[] res = new int[nums.length];
+        int i = 0;
+        int j = nums.length - 1;
+
+        while(i < j) {
+            if(Math.abs(nums[i]) > Math.abs(nums[j])) {
+                res[j - i] = nums[i] * nums[i];
+                i++;
+            } else {
+                res[j - i] = nums[j] * nums[j];
+                j--;
+            }
+        }
+
+        return res;
+    }
 }
