@@ -1,0 +1,9 @@
+{
+  "id": 123,
+  "fName": "Jackson",
+  "lName": "Mapper",
+  "address": {
+    "city": "Krakow",
+    "street": "Rakowicka"
+  }
+}

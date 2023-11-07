@@ -2,7 +2,6 @@ package pargunov.easy;
 
 public class AddBinary_67 {
     public static void main(String[] args) {
-        System.out.println(addBinary("11", "1"));
         // binary addition logic:
         // 1 0 0 1
         // 1 0 1 0
