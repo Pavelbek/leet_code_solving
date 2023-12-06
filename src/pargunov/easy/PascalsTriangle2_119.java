@@ -16,7 +16,6 @@ public class PascalsTriangle2_119 {
                 res.set(j, res.get(j - 1) + res.get(j));
             }
         }
-
         return res;
     }
 }

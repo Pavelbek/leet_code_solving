@@ -2,7 +2,7 @@ package pargunov.other;
 
 import java.util.Objects;
 
-public class MyArrayList<T> implements List<T> {
+public class MyArrayList<T> implements MyList<T> {
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
     private Object[] arr;
     private int size;

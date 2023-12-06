@@ -1,6 +1,6 @@
 package pargunov.other;
 
-public interface List<T> {
+public interface MyList<T> {
 
     void add(T element);
 

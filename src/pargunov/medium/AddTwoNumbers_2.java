@@ -2,6 +2,8 @@ package pargunov.medium;
 
 import pargunov.easy.ListNode;
 
+import java.util.Arrays;
+
 public class AddTwoNumbers_2 {
     public static void main(String[] args) {
         // for int < 10 : int / 10 = 0;   int >= 10 = 1;
@@ -15,6 +17,8 @@ public class AddTwoNumbers_2 {
         // 9 9 8
         // 9
         // 8 0 9
+
+        System.out.println(Arrays.toString("a##d#c".split("")));
     }
     private static ListNode<Integer> addTwoNumbers(ListNode<Integer> l1, ListNode<Integer> l2) {
         ListNode<Integer> dummy = new ListNode(0);
