@@ -1,6 +1,10 @@
 package pargunov.medium;
 
 public class WordSearch_79 {
+
+    public static void main(String[] args) {
+
+    }
     boolean[][] visited;
     private boolean exist(char[][] board, String word) {
         int rows = board.length;

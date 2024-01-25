@@ -2,7 +2,8 @@ package pargunov.easy;
 
 public class Sqrt_x_69 {
     public static void main(String[] args) {
-        System.out.println(mySqrt(2147483647));
+        int i = 5;
+        System.out.println(i ^= 4);
     }
 
     private static int mySqrt(int x) {
