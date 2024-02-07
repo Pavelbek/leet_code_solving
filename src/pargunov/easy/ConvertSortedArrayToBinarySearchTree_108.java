@@ -3,6 +3,11 @@ package pargunov.easy;
 import pargunov.other.TreeNode;
 
 public class ConvertSortedArrayToBinarySearchTree_108 {
+
+    public static void main(String[] args) {
+        System.out.println(-5 % 5);
+    }
+
     private TreeNode sortedArrayToBST(int[] nums) {
         return buildTree(nums, 0, nums.length - 1);
     }
