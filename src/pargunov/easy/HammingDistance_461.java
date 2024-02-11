@@ -13,6 +13,9 @@ public class HammingDistance_461 {
 //    0 and 0 -> 0 ; 1 & 1 = 1;
 //    so if we want to check bit by bit if numbers are different we check if last bits are both 1 and after make shift
 //    by 1 bit to right to check next last bits.
+    // 00010 representation after right shift by 1 bit will be >> 0001
+    // so we compare bit by bit shifting each time to right by 1 bit
+    // 6 & 1 = will return 0 or 1
     private static int hammingDistance(int x, int y) {
         int ans = 0;
         while(x > 0 || y > 0) {

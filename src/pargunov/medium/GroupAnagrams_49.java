@@ -44,7 +44,7 @@ public class GroupAnagrams_49 {
         // we are going through alphabet and create string like: a1b0c3d0...
         for(int i = 0; i < buckets.length; i++) {
             if(buckets[i] != 0) {
-                sb.append((char) 'a' + i);
+                sb.append('a' + i);
                 sb.append(buckets[i]);
             }
         }
