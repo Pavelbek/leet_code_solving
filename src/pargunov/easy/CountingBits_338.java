@@ -24,4 +24,14 @@ public class CountingBits_338 {
         }
         return bits;
     }
+
+    public int[] countBits3(int n) {
+        int[] res = new int[n + 1];
+
+        for(int i = 1; i <= n; i++) {
+            res[i] = res[i >> 1] + (i & 1); // (i & 1) - in braces because + has bigger priority and without () we will add and only after apply &
+        }
+
+        return res;
+    }
 }

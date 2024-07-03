@@ -7,6 +7,8 @@ import java.util.Set;
 import java.util.stream.IntStream;
 
 public class Permutations_II_47 {
+    // trick is if we choose same value for same position twice it will create same tree second time
+    // so we need to check if we used such value for this position on this level of recursion
     List<List<Integer>> result;
     public List<List<Integer>> permuteUnique(int[] nums) {
         result = new ArrayList<>();

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class TopKFrequentElements_347 {
+    public static void main(String[] args) {
+    }
     private static int[] topKFrequent(int[] nums, int k) {
         List<Integer>[] buckets = new List[nums.length + 1];
         Map<Integer, Integer> frequencyMap = new HashMap<>();
@@ -27,7 +29,7 @@ public class TopKFrequentElements_347 {
 
         for(int j = buckets.length - 1; j >= 0 && counter < k; j--) {
             if(buckets[j] != null) {
-                for(Integer num : buckets[j]) {
+                for(Integer num : buckets[j]) { // if same num for example 3 has same number of frequency we need to put it in same bucket
                     res[counter++] = num;
                 }
             }

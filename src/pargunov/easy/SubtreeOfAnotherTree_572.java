@@ -22,7 +22,7 @@ public class SubtreeOfAnotherTree_572 {
     }
 
 
-    // EFFECTIVE SOLUTION O(S * R)
+    // EFFECTIVE SOLUTION O(S * R) - size of root * size of sub root
     public boolean isSubtree2(TreeNode root, TreeNode subRoot) {
         if(subRoot == null) {
             return true;
@@ -33,7 +33,7 @@ public class SubtreeOfAnotherTree_572 {
         if(isSame(root, subRoot)) {
             return true;
         }
-        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+        return isSubtree2(root.left, subRoot) || isSubtree2(root.right, subRoot);
     }
 
     private boolean isSame(TreeNode root, TreeNode subRoot) {

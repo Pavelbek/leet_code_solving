@@ -4,6 +4,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FindTheDifference_389 {
+
+    public static void main(String[] args) {
+        char res = 0;
+        String s = "abcd";
+//        String t = "a";
+
+        for(char c : s.toCharArray()) {
+            res ^= c;
+        }
+
+//        for(char c : t.toCharArray()) {
+//            res ^= c;
+//        }
+
+        System.out.println(res);
+    }
     public char findTheDifference(String s, String t) {
         Map<Character, Integer> sCounter = countCharactrers(s);
         Map<Character, Integer> tCounter = countCharactrers(t);

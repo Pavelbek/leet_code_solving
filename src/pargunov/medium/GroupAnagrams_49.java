@@ -16,16 +16,13 @@ public class GroupAnagrams_49 {
         for(String str : strs) {
             String frequencyString = getFrequencyString(str);
 
-            if(groups.containsKey(frequencyString)) {
-                groups.get(frequencyString).add(str);
-            } else {
-                List<String> strList = new ArrayList<>();
-                strList.add(str);
-                groups.put(frequencyString, strList);
+            if(!groups.containsKey(frequencyString)) {
+                groups.put(frequencyString, new ArrayList<>());
             }
+            groups.get(frequencyString).add(str);
         }
 
-        return new ArrayList<List<String>>(groups.values());
+        return new ArrayList<>(groups.values());
     }
 
     private String getFrequencyString(String str) {

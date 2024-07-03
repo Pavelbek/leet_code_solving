@@ -2,6 +2,8 @@ package pargunov.easy;
 
 public class HammingDistance_461 {
     public static void main(String[] args) {
+        byte five = 0b100;
+        System.out.println(Integer.toBinaryString(five & 1));
     }
 
     // & 1 it is kind of bitmask it gives us: 00000001 -> so we compare only first bit from two numbers
